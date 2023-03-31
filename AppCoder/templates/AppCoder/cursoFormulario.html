@@ -1,0 +1,16 @@
+<h1> Formulario - Agregar Curso </h1>
+{% if miFormulario2.errors %} 
+<p style="color: red;"> Estan mal los datos, revisar </p>
+{% endif %}  
+<form action="" method="POST">{% csrf_token %} 
+    <!-- Aca esta la magia de Django-->
+
+    <table>
+        {{miFormulario2.as_table}}
+
+    </table>
+
+    <input type="submit", value="Enviar">
+
+
+</form>

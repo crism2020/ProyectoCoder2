@@ -1,0 +1,16 @@
+<h1> Formulario - Agregar Profesor </h1>
+{% if formulariop.errors %} 
+<p style="color: red;"> Estan mal los datos, revisar </p>
+{% endif %}  
+<form action="" method="POST">{% csrf_token %} 
+    <!-- Aca esta la magia de Django-->
+
+    <table>
+        {{formulariop.as_table}}
+
+    </table>
+
+    <input type="submit", value="Enviar">
+
+
+</form>
